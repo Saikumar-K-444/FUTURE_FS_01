@@ -1,0 +1,281 @@
+:root {
+  --bg-primary: #121214;
+  --bg-secondary: #1a1a1e;
+  --accent: #646cff;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+}
+
+/* Global */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10%;
+  background: var(--bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Common Section */
+
+.section-container {
+  padding: 5rem 10%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Hero Section */
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 100px 10% 50px;
+}
+
+.hero-section img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #2563eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.hero-section img:hover {
+  transform: scale(1.05);
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+  margin: 15px 0;
+}
+
+.hero-section p {
+  max-width: 650px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: white;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Resume */
+
+.resume-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--accent);
+  color: white;
+}
+
+.resume-card {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-left: 4px solid var(--accent);
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge {
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent);
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+/* Portfolio */
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.category-tag {
+  background: #2a2a35;
+  color: var(--accent);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* Contact */
+
+.contact-form {
+  background: var(--bg-secondary);
+  padding: 2.5rem;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: var(--bg-primary);
+  color: white;
+}
+
+.status-message {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 5px;
+}
+
+.status-message.success {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.status-message.error {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+}
